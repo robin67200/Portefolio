@@ -26,9 +26,9 @@
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css",
+              "src/theme.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/font-awesome/css/font-awesome.css"
-              
             ],
             "scripts": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
@@ -102,7 +102,8 @@
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/theme.scss"
             ],
             "scripts": []
           }
@@ -135,5 +136,10 @@
       }
     }
   },
-  "defaultProject": "PorteFolio-SPA"
+  "defaultProject": "PorteFolio-SPA",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

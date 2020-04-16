@@ -1,48 +1,119 @@
+<br />
 <ngb-carousel *ngIf="event_list">
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
-      <img src="../../../assets/images/new.jpg" alt="image">
+      <img src="../../../assets/images/new.jpg" alt="image" />
     </div>
     <div class="carousel-caption">
-      <h3>Bonjour, je suis Robin Vilmus</h3>
-      <p>Je suis actuellement en 2nd année de BTS SIO option SLAM</p>
+      <div class="container">
+        <h1 class="phrase">Bonjour, je suis Robin Vilmus<span> | </span></h1>
+        <p>Je suis actuellement en 2nd année de BTS SIO option SLAM</p>
+      </div>
     </div>
   </ng-template>
   <ng-template ngbSlide>
     <div class="picsum-img-wrapper">
-      <img src="../../../assets/images/ss.jpg" alt="Angular Carousel 2">
+      <img src="../../../assets/images/ss.jpg" alt="Angular Carousel 2" />
     </div>
     <div class="carousel-caption">
-      <h3>Naviguez sur mon site</h3>
-      <p>Vous trouverez des informations sur mon parcours, mes compétences, mes projets et bien plus encore...</p>
+      <div class="container">
+        <h1 class="phrase">Naviguez sur mon site<span> | </span></h1>
+        <p>
+          Vous trouverez des informations sur mon parcours, mes compétences, mes
+          projets et bien plus encore...
+        </p>
+      </div>
     </div>
   </ng-template>
 </ngb-carousel>
-<hr >
-<br />
-<div class="row" style="margin-left: 10px;">
+<hr />
+<div class="row" style="text-align: center;">
   <div class="col-lg-4">
-    <img class="rounded-circle" src="../../../assets/images/ss.jpg" alt="Generic placeholder image" width="140" height="140">
-    <h2>Qui suis-je ?</h2>
-    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
-       Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-    <p><a class="btn btn-outline-primary" href="#" role="button">Rejoindre »</a></p>
+    <mat-card>
+      <img
+        class="rounded-circle"
+        src="../../../assets/images/ss.jpg"
+        alt="Generic placeholder image"
+        width="140"
+        height="140"
+      />
+      <h2>Qui suis-je ?</h2>
+      <p>Bienvenue sur mon portfolio, Je suis Ott Jérémy et j'ai 21 ans.</p>
+      <p>
+        <a
+          class="btn btn-outline-primary"
+          (click)="pnlProfil.display()"
+          role="button"
+          >En savoir plus »</a
+        >
+      </p>
+    </mat-card>
   </div>
   <div class="col-lg-4">
-    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
-       Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-    <p><a class="btn btn-outline-primary" href="#" role="button">Rejoindre »</a></p>
+    <mat-card>
+      <img
+        class="rounded-circle"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Emoji_u2753.svg/1200px-Emoji_u2753.svg.png"
+        alt="Generic placeholder image"
+        width="140"
+        height="140"
+      />
+      <h2>Pourquoi être developpeur ?</h2>
+      <p>Je voulais devenir developpeur à cause de.....</p>
+      <p>
+        <a
+          class="btn btn-outline-primary"
+          (click)="pnlDev.display()"
+          role="button"
+          >En savoir plus »</a
+        >
+      </p>
+    </mat-card>
   </div>
   <div class="col-lg-4">
-    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
-       Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-    <p><a class="btn btn-outline-primary" href="#" role="button">Rejoindre »</a></p>
+    <mat-card>
+      <img
+        class="rounded-circle"
+        src="https://www.etudiant.ma//uploads/article/cover/10082/large_carriere_orientaion.jpg"
+        alt="Generic placeholder image"
+        width="140"
+        height="140"
+      />
+      <h2>Projet futur</h2>
+      <p>Mes projets futurs seraient de ...</p>
+      <p>
+        <a
+          class="btn btn-outline-primary"
+          (click)="pnlProjet.display()"
+          role="button"
+          >En savoir plus »</a
+        >
+      </p>
+    </mat-card>
   </div>
 </div>
-
-    
-
+<br />
+<app-app-slide-panel #pnlProfil>
+  <div panel-header style="text-align: center;">
+    <h4>Qui suis-je ?</h4>
+  </div>
+  <div panel-body>
+    <app-profil (onClose)="pnlProfil.hide()"> </app-profil>
+  </div>
+</app-app-slide-panel>
+<app-app-slide-panel #pnlDev>
+  <div panel-header style="text-align: center;">
+    <h4>Pourquoi être developpeur ?</h4>
+  </div>
+  <div panel-body>
+    <app-developpeur (onClose)="pnlDev.hide()"> </app-developpeur>
+  </div>
+</app-app-slide-panel>
+<app-app-slide-panel #pnlProjet>
+  <div panel-header style="text-align: center;">
+    <h4>Projet professionnel</h4>
+  </div>
+  <div panel-body>
+    <app-projet (onClose)="pnlProjet.hide()"> </app-projet>
+  </div>
+</app-app-slide-panel>

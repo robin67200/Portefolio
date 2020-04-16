@@ -1,34 +1,10 @@
-mat-sidenav-container {
-    height: 100%
-  }
-  
-  mat-sidenav, mat-sidenav-content {
-    padding: 0px;
-  
-  }
-  
-  mat-sidenav {
-    background-color: whitesmoke;
-    background-image: repeating-linear-gradient(white,rgba(176, 189, 248, 0.404));
-    width:250px;
-  }
-  
-  mat-toolbar {
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 998;
-      background-image: repeating-linear-gradient(white,rgba(255, 255, 255, 0.404));
-  }
-  
-  button:focus {
-    outline: 0;
-  }
-  
-  mat-list-item:focus {
-    outline: 0;
-  }
-
-  li {
+  li
+  {
       margin-right: 30px;
   }
+  button:focus {outline:0;}
+
+  .example-full-width
+ {
+  width: 100%;
+ }
