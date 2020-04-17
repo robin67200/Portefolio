@@ -71,6 +71,8 @@ export class ContactModal {
       width: '600px',
       height: '200px'
     });
+    
+    
     }
   }
 

@@ -17,7 +17,7 @@ export class CompetencesComponent implements OnInit {
   public radarChartLabels: Label[] = ['HTML/CSS', 'Angular 9', '.NET', 'SQLServer/MySql'];
 
   public radarChartData: ChartDataSets[] = [
-    { data: [100, 80, 60, 81, 0], label: '' },
+    { data: [90, 60, 60, 80, 0], label: '' },
   ];
   public radarChartType: ChartType = 'radar';
 
@@ -28,7 +28,7 @@ export class CompetencesComponent implements OnInit {
   public radarChartLabels2: Label[] = ['Windows/Linux', 'Serveur Apache', 'Adressage IP, Routage, DHCP, DNS', 'VMware (Virtualisation PC/ Serveur)'];
 
   public radarChartData2: ChartDataSets[] = [
-    { data: [100, 65, 50, 70, ], label: '' },
+    { data: [90, 65, 40, 70, 0 ], label: '' },
   ];
   public radarChartType2: ChartType = 'radar';
 

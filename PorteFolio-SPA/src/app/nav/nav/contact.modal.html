@@ -10,14 +10,14 @@
       <mat-label>Prenom</mat-label>
       <input matInput formControlName="prenom" required />
       <mat-error *ngIf="prenom.hasError('required')">
-        Veuillez rentrer un prenom
+        Veuillez renseigner un prenom
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Nom</mat-label>
       <input matInput formControlName="nom" required />
       <mat-error *ngIf="nom.hasError('required')">
-        Veuillez rentrer un nom
+        Veuillez renseigner un nom
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
@@ -25,29 +25,29 @@
       <input
         matInput
         formControlName="mail"
-        placeholder="Ex. groslard@example.com"
+        placeholder="Ex. toto@gmail.com"
         required
       />
       <mat-error
         *ngIf="mail.hasError('mail') && !mail.hasError('required')"
       >
-        Veuillez rentrer un e-mail
+        Veuillez renseigner un e-mail valide
       </mat-error>
       <mat-error *ngIf="mail.hasError('required')">
-        E-mail est <strong>réquis</strong>
+        E-mail est <strong>requis</strong>
       </mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Message</mat-label>
       <textarea matInput formControlName="message" required></textarea>
       <mat-error *ngIf="message.hasError('required')">
-        Veuillez rentrer un message
+        Veuillez renseigner un message
       </mat-error>
     </mat-form-field>
     <p><strong>Contact:</strong></p>
-    <p>Jeremy Ott</p>
-    <p>89 Rue des vergers 67360</p>
-    <p>0651676316</p>
+    <p>Robin Vilmus</p>
+    <p>11 rue de l'anneau à Strasbourg</p>
+    <p>06.88.26.01.14</p>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">Retour</button>
